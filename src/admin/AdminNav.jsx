@@ -17,6 +17,10 @@ const admin_nav = [
   {
     display : 'Add Product',
     path:'/dashboard/add-products'
+  },
+  {
+    display : 'Home',
+    path:'/home'
   }
 ];
 

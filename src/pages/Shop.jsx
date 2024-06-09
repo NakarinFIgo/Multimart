@@ -41,8 +41,22 @@ function Shop() {
           )
           setProductsData(filteredProducts)
         }
+      }else{
+        setProductsData(products)
       }
-  }
+    }
+  const handleSort = (e) => {
+    const sortItem = e.target.value;
+    let sortedProducts = [];
+    if (sortItem === 'ascending') {
+      sortedProducts = [...productsData].sort((a, b) => a.price - b.price);
+    }else if (sortItem === 'descending') {
+      sortedProducts = [...productsData].sort((a, b) => b.price - a.price);
+    }else{
+      return null
+    }
+    setProductsData(sortedProducts);
+  };
 
   const handleSearch = (e) => {
     const searchTerm = e.target.value
@@ -57,7 +71,7 @@ function Shop() {
       <div className='flex justify-around lg:px-20 xl:px-[80px] 2xl:px-40 pt-10'>
         <div>
           <select onChange={handleFilter} className='border bg-[#005136] text-white rounded-md text-xs lg:w-[150px] xl:w-[200px] h-[30px] px-2'>
-            <option>Filter By Category</option>
+            <option value="catagory">Filter By Category</option>
             <option value="sofa">Sofa</option>
             <option value="mobile">Mobile</option>
             <option value="chair">Chair</option>
@@ -66,7 +80,7 @@ function Shop() {
           </select>
         </div>
         <div>
-          <select className='border bg-[#005136] text-white rounded-md text-xs lg:w-[100px] xl:w-[200px] h-[30px] px-2'>
+          <select onChange={handleSort} className='border bg-[#005136] text-white rounded-md text-xs lg:w-[100px] xl:w-[200px] h-[30px] px-2'>
             <option>Sort By </option>
             <option value="ascending">Ascending</option>
             <option value="descending">Descending</option>
