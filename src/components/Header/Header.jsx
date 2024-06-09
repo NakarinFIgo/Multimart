@@ -120,12 +120,15 @@ function Header() {
                 {isProfileMenuOpen && (
                   <div className='absolute right-0 mt-2 py-2 w-48 bg-white border rounded-lg shadow-xl'>
                     {currentUser ? (
+                    <div>  
                       <span className='block px-4 py-2 text-gray-800 cursor-pointer hover:bg-gray-200' onClick={logout} na>Logout</span>
+                      <span><Link to='/dashboard' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>Dashboard</Link></span>
+                    </div>
                     ) : (
                       <div>
                         <Link to='/signup' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>Signup</Link>
                         <Link to='/login' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>Login</Link>
-                        <Link to='/dashboard' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>Dashboard</Link>
+                        
                       </div>
                     )}
                   </div>

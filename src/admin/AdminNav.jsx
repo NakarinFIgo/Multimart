@@ -11,13 +11,13 @@ const admin_nav = [
     path: '/dashboard/all-products',
   },
   {
-    display: 'Orders',
-    path: '/dashboard/orders',
-  },
-  {
     display: 'User',
     path: '/dashboard/users',
   },
+  {
+    display : 'Add Product',
+    path:'/dashboard/add-products'
+  }
 ];
 
 function AdminNav() {
