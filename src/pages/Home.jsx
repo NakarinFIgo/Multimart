@@ -48,7 +48,7 @@ function Home() {
                 <p className='w-[300px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                   Sed soluta earum tempore perspiciatis non illum ab quam illo temporibus magnam.</p>
                 <motion.button whileTap={{scale:1.1}} className='border-solid bg-[#0C5A6C] text-white w-[100px] h-[30px] rounded-md  mt-4 absolute left-[-1px] ml-4'>
-                  <Link to='shop'>
+                  <Link to='/shop'>
                     <span className='text-sm py-1'>SHOP NOW</span>
                   </Link> 
                 </motion.button>
